@@ -49,47 +49,76 @@
       <!-- Module 1 -->
       <div id="mod1" class="tab-pane space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 1: Basic Circuit Laws and Analysis</h2>
-        <div><strong>Mesh Analysis:</strong> Apply KVL: \( \sum V = 0 \)</div>
-        <div><strong>Nodal Analysis:</strong> Use KCL: \( \sum I = 0 \), \( I = \frac{V}{R} \)</div>
-        <div><strong>Ohm's Law:</strong> \( V = IR \), where \( R = \frac{\rho l}{A} \)</div>
-        <div><strong>Series Circuits:</strong> \( R_{eq} = R_1 + R_2 + \ldots \)</div>
-        <div><strong>Parallel Circuits:</strong> \( \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots \)</div>
-        <div><strong>Star-Delta Conversion:</strong> Use transformation formulas for complex networks.</div>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Ohm's Law:</strong> \( V = IR \), where \( V \) = voltage, \( I \) = current, \( R \) = resistance.</li>
+          <li><strong>Resistance Formula:</strong> \( R = \frac{\rho l}{A} \) where \( \rho \) = resistivity, \( l \) = length, \( A \) = cross-sectional area.</li>
+          <li><strong>Series Circuits:</strong> Total resistance \( R_{eq} = R_1 + R_2 + \ldots + R_n \).</li>
+          <li><strong>Parallel Circuits:</strong> \( \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots + \frac{1}{R_n} \).</li>
+          <li><strong>Kirchhoff's Voltage Law (KVL):</strong> Sum of voltages around any closed loop is zero: \( \sum V = 0 \).</li>
+          <li><strong>Kirchhoff's Current Law (KCL):</strong> Sum of currents entering a junction equals sum leaving: \( \sum I = 0 \).</li>
+          <li><strong>Mesh Analysis:</strong> Apply KVL to find mesh currents in complex circuits.</li>
+          <li><strong>Nodal Analysis:</strong> Use KCL to find node voltages, currents expressed as \( I = \frac{V}{R} \).</li>
+          <li><strong>Star-Delta Transformation:</strong> Convert between star (Y) and delta (Δ) resistor networks using standard formulas to simplify circuit analysis.</li>
+        </ul>
       </div>
 
       <!-- Module 2 -->
       <div id="mod2" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 2: AC Circuits</h2>
-        <div><strong>RL Circuit:</strong> \( V = IR + L\frac{dI}{dt} \), \( I(t) = \frac{V}{R}(1 - e^{-\frac{R}{L}t}) \)</div>
-        <div><strong>RC Circuit:</strong> \( V = IR + \frac{1}{C} \int I dt \), \( I(t) = \frac{V}{R} e^{-t/RC} \)</div>
-        <div><strong>RLC Circuit:</strong> \( L \frac{d^2I}{dt^2} + R \frac{dI}{dt} + \frac{I}{C} = \frac{dV}{dt} \)</div>
-        <div><strong>Power Factor:</strong> \( \cos\theta = \frac{R}{Z} \), where \( Z = \sqrt{R^2 + (X_L - X_C)^2} \)</div>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Alternating Current (AC):</strong> Current that reverses direction periodically; represented by sinusoidal functions.</li>
+          <li><strong>Impedance (Z):</strong> \( Z = R + jX \), total opposition to AC, with resistance \( R \) and reactance \( X \).</li>
+          <li><strong>Reactance:</strong> \( X_L = 2\pi f L \) for inductors, \( X_C = \frac{1}{2\pi f C} \) for capacitors.</li>
+          <li><strong>RMS Values:</strong> \( V_{rms} = \frac{V_{peak}}{\sqrt{2}} \), \( I_{rms} = \frac{I_{peak}}{\sqrt{2}} \).</li>
+          <li><strong>RL Circuit:</strong> Voltage \( V = IR + L \frac{dI}{dt} \), current response: \( I(t) = \frac{V}{R} (1 - e^{-\frac{R}{L}t}) \).</li>
+          <li><strong>RC Circuit:</strong> Voltage \( V = IR + \frac{1}{C} \int I dt \), current response: \( I(t) = \frac{V}{R} e^{-t/RC} \).</li>
+          <li><strong>RLC Circuit:</strong> Second-order differential equation: \( L \frac{d^2 I}{dt^2} + R \frac{dI}{dt} + \frac{1}{C} I = \frac{dV}{dt} \).</li>
+          <li><strong>Power Factor (PF):</strong> \( \cos \theta = \frac{R}{Z} \), ratio of real power to apparent power.</li>
+          <li><strong>Resonance:</strong> Occurs when \( X_L = X_C \), circuit behaves purely resistive.</li>
+        </ul>
       </div>
 
       <!-- Module 3 -->
       <div id="mod3" class="tab-pane hidden space-y-4">
-        <h2 class="text-xl font-semibold text-blue-600">Module 3: Machines</h2>
-        <div><strong>DC Generator EMF:</strong> \( E = \frac{P \Phi Z N}{60 A} \)</div>
-        <div><strong>DC Motor:</strong> \( E_b = \frac{P \Phi Z N}{60 A} \), and \( T \propto \Phi I_a \)</div>
-        <div><strong>Transformer EMF:</strong> \( E = 4.44 f N \Phi_m \), and \( \frac{E_1}{E_2} = \frac{N_1}{N_2} \)</div>
+        <h2 class="text-xl font-semibold text-blue-600">Module 3: Electrical Machines</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>DC Generator EMF:</strong> \( E = \frac{P \Phi Z N}{60 A} \), where \( P \) = number of poles, \( \Phi \) = flux per pole, \( Z \) = total conductors, \( N \) = speed (rpm), \( A \) = parallel paths.</li>
+          <li><strong>DC Motor Back EMF:</strong> \( E_b = \frac{P \Phi Z N}{60 A} \), opposes applied voltage and controls speed.</li>
+          <li><strong>Torque in DC Motor:</strong> \( T \propto \Phi I_a \), proportional to flux and armature current.</li>
+          <li><strong>Transformer EMF Equation:</strong> \( E = 4.44 f N \Phi_m \), where \( f \) = frequency, \( N \) = number of turns, \( \Phi_m \) = max flux.</li>
+          <li><strong>Transformer Turns Ratio:</strong> \( \frac{E_1}{E_2} = \frac{N_1}{N_2} \), relates primary and secondary voltages to turns.</li>
+          <li><strong>Efficiency and Regulation:</strong> Efficiency = output/input × 100%; Regulation indicates voltage change from no load to full load.</li>
+        </ul>
       </div>
 
       <!-- Module 4 -->
       <div id="mod4" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 4: Semiconductor Devices</h2>
-        <div><strong>PN Junction:</strong> Shockley equation: \( I = I_0(e^{\frac{V}{\eta V_T}} - 1) \)</div>
-        <div><strong>Zener Diode:</strong> Operates in reverse breakdown region with stable voltage</div>
-        <div><strong>BJT Operation:</strong> \( I_C = \beta I_B \); modes: active, saturation, cut-off</div>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>PN Junction Diode:</strong> Allows current flow in one direction; Shockley diode equation: \( I = I_0 (e^{\frac{V}{\eta V_T}} - 1) \) where \( V_T \) is thermal voltage.</li>
+          <li><strong>Zener Diode:</strong> Operates in reverse breakdown region, used for voltage regulation and reference.</li>
+          <li><strong>Bipolar Junction Transistor (BJT):</strong> Current controlled device; \( I_C = \beta I_B \) with modes: active, saturation, cut-off.</li>
+          <li><strong>Field Effect Transistor (FET):</strong> Voltage controlled device with high input impedance.</li>
+          <li><strong>Half-wave and Full-wave Rectifiers:</strong> Convert AC to DC; full-wave has higher efficiency and less ripple.</li>
+          <li><strong>Filters:</strong> Capacitor and inductor filters used to smooth rectified output.</li>
+        </ul>
       </div>
 
       <!-- Module 5 -->
       <div id="mod5" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 5: Digital Electronics</h2>
-        <div><strong>SR Flip-Flop:</strong> \( Q_{next} = S + \overline{R}Q \)</div>
-        <div><strong>JK Flip-Flop:</strong> \( Q_{next} = J\overline{Q} + \overline{K}Q \)</div>
-        <div><strong>Half Adder:</strong> Sum = \( A \oplus B \), Carry = \( AB \)</div>
-        <div><strong>Full Adder:</strong> Sum = \( A \oplus B \oplus C_{in} \), Carry = \( AB + BC_{in} + AC_{in} \)</div>
-        <div><strong>A/D & D/A Converters:</strong> Flash comparator and R-2R Ladder logic</div>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Logic Gates:</strong> AND, OR, NOT, NAND, NOR, XOR, XNOR basic gates.</li>
+          <li><strong>SR Flip-Flop:</strong> \( Q_{next} = S + \overline{R}Q \); basic bistable storage element.</li>
+          <li><strong>JK Flip-Flop:</strong> \( Q_{next} = J\overline{Q} + \overline{K}Q \); resolves invalid SR states.</li>
+          <li><strong>D Flip-Flop:</strong> Data latch; output follows input on clock edge.</li>
+          <li><strong>Half Adder:</strong> Sum = \( A \oplus B \), Carry = \( AB \).</li>
+          <li><strong>Full Adder:</strong> Sum = \( A \oplus B \oplus C_{in} \), Carry = \( AB + BC_{in} + AC_{in} \).</li>
+          <li><strong>Multiplexers and Demultiplexers:</strong> Data selectors and routing devices.</li>
+          <li><strong>A/D Converters:</strong> Flash comparator and successive approximation types.</li>
+          <li><strong>D/A Converters:</strong> R-2R ladder and weighted resistor types.</li>
+          <li><strong>Shift Registers and Counters:</strong> Sequential logic elements used for data storage and counting.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -101,6 +130,12 @@
       tabs.forEach(tab => tab.classList.add('hidden'));
       buttons.forEach(btn => btn.classList.remove('bg-blue-300'));
       document.getElementById(id).classList.remove('hidden');
+      // Highlight clicked button
+      buttons.forEach(btn => {
+        if(btn.textContent.toLowerCase().includes(id)) {
+          btn.classList.add('bg-blue-300');
+        }
+      });
     }
     // Show first tab on load
     openTab('mod1');
