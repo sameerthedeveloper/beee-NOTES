@@ -37,6 +37,7 @@
 
     <!-- Tab Buttons -->
     <div class="flex flex-wrap justify-center gap-2">
+      <button onclick="openTab('plan')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Study Plan</button>
       <button onclick="openTab('mod1')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 1</button>
       <button onclick="openTab('mod2')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 2</button>
       <button onclick="openTab('mod3')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 3</button>
@@ -46,19 +47,99 @@
 
     <!-- Tab Content -->
     <div id="tab-content" class="text-sm sm:text-base space-y-6">
+      <!-- Study Plan -->
+      <div id="plan" class="tab-pane space-y-4 hidden">
+        <h2 class="text-xl font-semibold text-blue-600">🕰 BEEE Exam Study Plan (1:30 PM – 9:30 PM)</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full border border-gray-300 text-left text-gray-700">
+            <thead class="bg-blue-100 text-blue-700">
+              <tr>
+                <th class="px-4 py-2 border border-gray-300">Time Slot</th>
+                <th class="px-4 py-2 border border-gray-300">Task</th>
+                <th class="px-4 py-2 border border-gray-300">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border border-gray-300">
+                <td class="px-4 py-2 border border-gray-300">1:30 – 2:30 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 1: Mesh/Nodal + KVL/KCL + Ohm’s</td>
+                <td class="px-4 py-2 border border-gray-300">Practice 2 sums each + derivations</td>
+              </tr>
+              <tr class="border border-gray-300 bg-gray-50">
+                <td class="px-4 py-2 border border-gray-300">2:30 – 2:45 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Break</td>
+                <td class="px-4 py-2 border border-gray-300">Light snack + hydrate</td>
+              </tr>
+              <tr class="border border-gray-300">
+                <td class="px-4 py-2 border border-gray-300">2:45 – 3:45 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 2: RL + RC Derivations + Problems</td>
+                <td class="px-4 py-2 border border-gray-300">Focus on solving step-by-step</td>
+              </tr>
+              <tr class="border border-gray-300 bg-gray-50">
+                <td class="px-4 py-2 border border-gray-300">3:45 – 4:00 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Asr Prayer + Short Refreshment</td>
+                <td class="px-4 py-2 border border-gray-300">10 min prayer + 5 min walk/stretch</td>
+              </tr>
+              <tr class="border border-gray-300">
+                <td class="px-4 py-2 border border-gray-300">4:00 – 5:00 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 2: RLC Circuit + Power Factor</td>
+                <td class="px-4 py-2 border border-gray-300">Derivation + 2 problem types</td>
+              </tr>
+              <tr class="border border-gray-300 bg-gray-50">
+                <td class="px-4 py-2 border border-gray-300">5:00 – 5:15 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Break</td>
+                <td class="px-4 py-2 border border-gray-300">Tea + relax eyes (no screen)</td>
+              </tr>
+              <tr class="border border-gray-300">
+                <td class="px-4 py-2 border border-gray-300">5:15 – 6:15 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 3: DC Generator + Motor</td>
+                <td class="px-4 py-2 border border-gray-300">Focus on EMF formula & torque concept</td>
+              </tr>
+              <tr class="border border-gray-300 bg-gray-50">
+                <td class="px-4 py-2 border border-gray-300">6:15 – 6:45 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Maghrib Prayer + Dinner Break</td>
+                <td class="px-4 py-2 border border-gray-300">Eat light, avoid heavy carbs</td>
+              </tr>
+              <tr class="border border-gray-300">
+                <td class="px-4 py-2 border border-gray-300">6:45 – 7:30 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 3: Transformer Derivations + Sums</td>
+                <td class="px-4 py-2 border border-gray-300">Include turns ratio & formula use</td>
+              </tr>
+              <tr class="border border-gray-300 bg-gray-50">
+                <td class="px-4 py-2 border border-gray-300">7:30 – 8:15 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 4: Diodes + BJT + Zener</td>
+                <td class="px-4 py-2 border border-gray-300">Use visuals to revise characteristics</td>
+              </tr>
+              <tr class="border border-gray-300">
+                <td class="px-4 py-2 border border-gray-300">8:15 – 8:30 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Isha Prayer + Break</td>
+                <td class="px-4 py-2 border border-gray-300">Clear mind before final session</td>
+              </tr>
+              <tr class="border border-gray-300 bg-gray-50">
+                <td class="px-4 py-2 border border-gray-300">8:30 – 9:30 PM</td>
+                <td class="px-4 py-2 border border-gray-300 font-semibold">Module 5: Flip-Flops + Adders</td>
+                <td class="px-4 py-2 border border-gray-300">Derive logic equations + 1 sum each</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="mt-6 text-lg font-semibold text-green-700">✅ Quick Tips for Better Memory</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-800">
+          <li>✍️ <strong>Write formulas</strong> repeatedly after each topic.</li>
+          <li>🧠 <strong>Teach a topic</strong> to yourself aloud in 1–2 mins summaries.</li>
+          <li>🕯 <strong>Use diagrams</strong> to connect concepts (especially BJTs, transformers, flip-flops).</li>
+          <li>📌 Revise <strong>derivations by flow</strong>: Start from KVL/KCL → derive step-by-step equations.</li>
+        </ul>
+      </div>
+
       <!-- Module 1 -->
-      <div id="mod1" class="tab-pane space-y-4">
-        <h2 class="text-xl font-semibold text-blue-600">Module 1: Basic Circuit Laws and Analysis</h2>
+      <div id="mod1" class="tab-pane hidden space-y-4">
+        <h2 class="text-xl font-semibold text-blue-600">Module 1: Basic Electrical Concepts</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>Ohm's Law:</strong> \( V = IR \), where \( V \) = voltage, \( I \) = current, \( R \) = resistance.</li>
-          <li><strong>Resistance Formula:</strong> \( R = \frac{\rho l}{A} \) where \( \rho \) = resistivity, \( l \) = length, \( A \) = cross-sectional area.</li>
-          <li><strong>Series Circuits:</strong> Total resistance \( R_{eq} = R_1 + R_2 + \ldots + R_n \).</li>
-          <li><strong>Parallel Circuits:</strong> \( \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots + \frac{1}{R_n} \).</li>
-          <li><strong>Kirchhoff's Voltage Law (KVL):</strong> Sum of voltages around any closed loop is zero: \( \sum V = 0 \).</li>
-          <li><strong>Kirchhoff's Current Law (KCL):</strong> Sum of currents entering a junction equals sum leaving: \( \sum I = 0 \).</li>
-          <li><strong>Mesh Analysis:</strong> Apply KVL to find mesh currents in complex circuits.</li>
-          <li><strong>Nodal Analysis:</strong> Use KCL to find node voltages, currents expressed as \( I = \frac{V}{R} \).</li>
-          <li><strong>Star-Delta Transformation:</strong> Convert between star (Y) and delta (Δ) resistor networks using standard formulas to simplify circuit analysis.</li>
+          <li><strong>Ohm’s Law:</strong> Voltage (V), Current (I), Resistance (R), and Power (P) relationships.</li>
+          <li><strong>Kirchhoff’s Laws:</strong> KVL and KCL for circuit analysis.</li>
+          <li><strong>Mesh and Nodal Analysis:</strong> Systematic methods to solve circuits.</li>
         </ul>
       </div>
 
@@ -66,15 +147,9 @@
       <div id="mod2" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 2: AC Circuits</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>Alternating Current (AC):</strong> Current that reverses direction periodically; represented by sinusoidal functions.</li>
-          <li><strong>Impedance (Z):</strong> \( Z = R + jX \), total opposition to AC, with resistance \( R \) and reactance \( X \).</li>
-          <li><strong>Reactance:</strong> \( X_L = 2\pi f L \) for inductors, \( X_C = \frac{1}{2\pi f C} \) for capacitors.</li>
-          <li><strong>RMS Values:</strong> \( V_{rms} = \frac{V_{peak}}{\sqrt{2}} \), \( I_{rms} = \frac{I_{peak}}{\sqrt{2}} \).</li>
-          <li><strong>RL Circuit:</strong> Voltage \( V = IR + L \frac{dI}{dt} \), current response: \( I(t) = \frac{V}{R} (1 - e^{-\frac{R}{L}t}) \).</li>
-          <li><strong>RC Circuit:</strong> Voltage \( V = IR + \frac{1}{C} \int I dt \), current response: \( I(t) = \frac{V}{R} e^{-t/RC} \).</li>
-          <li><strong>RLC Circuit:</strong> Second-order differential equation: \( L \frac{d^2 I}{dt^2} + R \frac{dI}{dt} + \frac{1}{C} I = \frac{dV}{dt} \).</li>
-          <li><strong>Power Factor (PF):</strong> \( \cos \theta = \frac{R}{Z} \), ratio of real power to apparent power.</li>
-          <li><strong>Resonance:</strong> Occurs when \( X_L = X_C \), circuit behaves purely resistive.</li>
+          <li><strong>RL and RC Circuits:</strong> Time constants, transient response.</li>
+          <li><strong>RLC Circuits:</strong> Resonance, bandwidth, and power factor.</li>
+          <li><strong>Power in AC Circuits:</strong> Real, reactive, and apparent power.</li>
         </ul>
       </div>
 
@@ -82,12 +157,9 @@
       <div id="mod3" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 3: Electrical Machines</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>DC Generator EMF:</strong> \( E = \frac{P \Phi Z N}{60 A} \), where \( P \) = number of poles, \( \Phi \) = flux per pole, \( Z \) = total conductors, \( N \) = speed (rpm), \( A \) = parallel paths.</li>
-          <li><strong>DC Motor Back EMF:</strong> \( E_b = \frac{P \Phi Z N}{60 A} \), opposes applied voltage and controls speed.</li>
-          <li><strong>Torque in DC Motor:</strong> \( T \propto \Phi I_a \), proportional to flux and armature current.</li>
-          <li><strong>Transformer EMF Equation:</strong> \( E = 4.44 f N \Phi_m \), where \( f \) = frequency, \( N \) = number of turns, \( \Phi_m \) = max flux.</li>
-          <li><strong>Transformer Turns Ratio:</strong> \( \frac{E_1}{E_2} = \frac{N_1}{N_2} \), relates primary and secondary voltages to turns.</li>
-          <li><strong>Efficiency and Regulation:</strong> Efficiency = output/input × 100%; Regulation indicates voltage change from no load to full load.</li>
+          <li><strong>DC Generators:</strong> EMF equation, types of generators.</li>
+          <li><strong>DC Motors:</strong> Torque, speed control methods.</li>
+          <li><strong>Transformers:</strong> Principle, EMF equation, losses.</li>
         </ul>
       </div>
 
@@ -95,12 +167,11 @@
       <div id="mod4" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 4: Semiconductor Devices</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>PN Junction Diode:</strong> Allows current flow in one direction; Shockley diode equation: \( I = I_0 (e^{\frac{V}{\eta V_T}} - 1) \) where \( V_T \) is thermal voltage.</li>
-          <li><strong>Zener Diode:</strong> Operates in reverse breakdown region, used for voltage regulation and reference.</li>
-          <li><strong>Bipolar Junction Transistor (BJT):</strong> Current controlled device; \( I_C = \beta I_B \) with modes: active, saturation, cut-off.</li>
-          <li><strong>Field Effect Transistor (FET):</strong> Voltage controlled device with high input impedance.</li>
-          <li><strong>Half-wave and Full-wave Rectifiers:</strong> Convert AC to DC; full-wave has higher efficiency and less ripple.</li>
-          <li><strong>Filters:</strong> Capacitor and inductor filters used to smooth rectified output.</li>
+          <li><strong>PN Junction Diode:</strong> Allows current flow in one direction; forward and reverse bias characteristics.</li>
+          <li><strong>Zener Diode:</strong> Operates in reverse breakdown region to provide voltage regulation.</li>
+          <li><strong>BJT Transistor:</strong> Bipolar Junction Transistor operating in active, cutoff, and saturation regions.</li>
+          <li><strong>Rectifiers:</strong> Half-wave and full-wave rectifiers convert AC to DC.</li>
+          <li><strong>Filters:</strong> Capacitor and LC filters smooth output DC voltage.</li>
         </ul>
       </div>
 
@@ -108,57 +179,36 @@
       <div id="mod5" class="tab-pane hidden space-y-4">
         <h2 class="text-xl font-semibold text-blue-600">Module 5: Digital Electronics</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>Logic Gates:</strong> AND, OR, NOT, NAND, NOR, XOR, XNOR basic gates.</li>
-          <li><strong>SR Flip-Flop:</strong> \( Q_{next} = S + \overline{R}Q \); basic bistable storage element.</li>
-          <li><strong>JK Flip-Flop:</strong> \( Q_{next} = J\overline{Q} + \overline{K}Q \); resolves invalid SR states.</li>
-          <li><strong>D Flip-Flop:</strong> Data latch; output follows input on clock edge.</li>
-          <li><strong>Half Adder:</strong> Sum = \( A \oplus B \), Carry = \( AB \).</li>
-          <li><strong>Full Adder:</strong> Sum = \( A \oplus B \oplus C_{in} \), Carry = \( AB + BC_{in} + AC_{in} \).</li>
-          <li><strong>Multiplexers and Demultiplexers:</strong> Data selectors and routing devices.</li>
-          <li><strong>A/D Converters:</strong> Flash comparator and successive approximation types.</li>
-          <li><strong>D/A Converters:</strong> R-2R ladder and weighted resistor types.</li>
-          <li><strong>Shift Registers and Counters:</strong> Sequential logic elements used for data storage and counting.</li>
+          <li><strong>Logic Gates:</strong> AND, OR, NOT, NAND, NOR, XOR, XNOR basics.</li>
+          <li><strong>Flip-Flops:</strong> SR, JK, D, and T flip-flops and their truth tables.</li>
+          <li><strong>Adders:</strong> Half and full adders for binary addition.</li>
+          <li><strong>Multiplexers & Demultiplexers:</strong> Data selectors and distributors.</li>
+          <li><strong>Converters:</strong> Binary to Gray, BCD to Decimal converters.</li>
         </ul>
       </div>
     </div>
   </div>
 
   <script>
-    const tabs = document.querySelectorAll('.tab-pane');
-    const buttons = document.querySelectorAll('.tab-btn');
-    function openTab(id) {
-      tabs.forEach(tab => tab.classList.add('hidden'));
-      buttons.forEach(btn => btn.classList.remove('bg-blue-300'));
-      document.getElementById(id).classList.remove('hidden');
-      // Highlight clicked button
-      buttons.forEach(btn => {
-        if(btn.textContent.toLowerCase().includes(id)) {
-          btn.classList.add('bg-blue-300');
-        }
+    // Tab switcher
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    function openTab(tabId) {
+      tabPanes.forEach(pane => {
+        pane.classList.toggle('hidden', pane.id !== tabId);
+      });
+      tabButtons.forEach(btn => {
+        const isActive = btn.textContent.toLowerCase().includes(tabId);
+        btn.classList.toggle('bg-blue-700', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('bg-blue-100', !isActive);
+        btn.classList.toggle('text-blue-700', !isActive);
       });
     }
-    // Show first tab on load
-    openTab('mod1');
-  </script>
 
-  <script>
-    // Register a minimal service worker using a Blob URL
-    if ('serviceWorker' in navigator) {
-      const swCode = `
-        self.addEventListener('install', event => {
-          event.waitUntil(self.skipWaiting());
-        });
-        self.addEventListener('activate', event => {
-          event.waitUntil(self.clients.claim());
-        });
-        self.addEventListener('fetch', event => {
-          event.respondWith(fetch(event.request).catch(() => new Response('Offline mode: no connection')));
-        });
-      `;
-      const blob = new Blob([swCode], { type: 'application/javascript' });
-      const swUrl = URL.createObjectURL(blob);
-      navigator.serviceWorker.register(swUrl).catch(console.error);
-    }
+    // Open Study Plan by default
+    openTab('plan');
   </script>
 
 </body>
