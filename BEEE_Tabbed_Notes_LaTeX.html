@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEEE Semester Study Notes</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body);"></script>
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
+
+  <div class="w-full max-w-4xl bg-white rounded-xl shadow-lg p-4 sm:p-6 space-y-6">
+    <h1 class="text-2xl sm:text-3xl font-bold text-center text-blue-700 mb-4">BEEE Semester Study Notes</h1>
+
+    <!-- Tab Buttons -->
+    <div class="flex flex-wrap justify-center gap-2">
+      <button onclick="openTab('mod1')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 1</button>
+      <button onclick="openTab('mod2')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 2</button>
+      <button onclick="openTab('mod3')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 3</button>
+      <button onclick="openTab('mod4')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 4</button>
+      <button onclick="openTab('mod5')" class="tab-btn bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200">Module 5</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="tab-content" class="text-sm sm:text-base space-y-6">
+      <!-- Module 1 -->
+      <div id="mod1" class="tab-pane space-y-4">
+        <h2 class="text-xl font-semibold text-blue-600">Module 1: Basic Circuit Laws and Analysis</h2>
+        <div><strong>Mesh Analysis:</strong> Apply KVL: \( \sum V = 0 \)</div>
+        <div><strong>Nodal Analysis:</strong> Use KCL: \( \sum I = 0 \), \( I = \frac{V}{R} \)</div>
+        <div><strong>Ohm's Law:</strong> \( V = IR \), where \( R = \frac{\rho l}{A} \)</div>
+        <div><strong>Series Circuits:</strong> \( R_{eq} = R_1 + R_2 + \ldots \)</div>
+        <div><strong>Parallel Circuits:</strong> \( \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots \)</div>
+        <div><strong>Star-Delta Conversion:</strong> Use transformation formulas for complex networks.</div>
+      </div>
+
+      <!-- Module 2 -->
+      <div id="mod2" class="tab-pane hidden space-y-4">
+        <h2 class="text-xl font-semibold text-blue-600">Module 2: AC Circuits</h2>
+        <div><strong>RL Circuit:</strong> \( V = IR + L\frac{dI}{dt} \), \( I(t) = \frac{V}{R}(1 - e^{-\frac{R}{L}t}) \)</div>
+        <div><strong>RC Circuit:</strong> \( V = IR + \frac{1}{C} \int I dt \), \( I(t) = \frac{V}{R} e^{-t/RC} \)</div>
+        <div><strong>RLC Circuit:</strong> \( L \frac{d^2I}{dt^2} + R \frac{dI}{dt} + \frac{I}{C} = \frac{dV}{dt} \)</div>
+        <div><strong>Power Factor:</strong> \( \cos\theta = \frac{R}{Z} \), where \( Z = \sqrt{R^2 + (X_L - X_C)^2} \)</div>
+      </div>
+
+      <!-- Module 3 -->
+      <div id="mod3" class="tab-pane hidden space-y-4">
+        <h2 class="text-xl font-semibold text-blue-600">Module 3: Machines</h2>
+        <div><strong>DC Generator EMF:</strong> \( E = \frac{P \Phi Z N}{60 A} \)</div>
+        <div><strong>DC Motor:</strong> \( E_b = \frac{P \Phi Z N}{60 A} \), and \( T \propto \Phi I_a \)</div>
+        <div><strong>Transformer EMF:</strong> \( E = 4.44 f N \Phi_m \), and \( \frac{E_1}{E_2} = \frac{N_1}{N_2} \)</div>
+      </div>
+
+      <!-- Module 4 -->
+      <div id="mod4" class="tab-pane hidden space-y-4">
+        <h2 class="text-xl font-semibold text-blue-600">Module 4: Semiconductor Devices</h2>
+        <div><strong>PN Junction:</strong> Shockley equation: \( I = I_0(e^{\frac{V}{\eta V_T}} - 1) \)</div>
+        <div><strong>Zener Diode:</strong> Operates in reverse breakdown region with stable voltage</div>
+        <div><strong>BJT Operation:</strong> \( I_C = \beta I_B \); modes: active, saturation, cut-off</div>
+      </div>
+
+      <!-- Module 5 -->
+      <div id="mod5" class="tab-pane hidden space-y-4">
+        <h2 class="text-xl font-semibold text-blue-600">Module 5: Digital Electronics</h2>
+        <div><strong>SR Flip-Flop:</strong> \( Q_{next} = S + \overline{R}Q \)</div>
+        <div><strong>JK Flip-Flop:</strong> \( Q_{next} = J\overline{Q} + \overline{K}Q \)</div>
+        <div><strong>Half Adder:</strong> Sum = \( A \oplus B \), Carry = \( AB \)</div>
+        <div><strong>Full Adder:</strong> Sum = \( A \oplus B \oplus C_{in} \), Carry = \( AB + BC_{in} + AC_{in} \)</div>
+        <div><strong>A/D & D/A Converters:</strong> Flash comparator and R-2R Ladder logic</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-pane');
+    const buttons = document.querySelectorAll('.tab-btn');
+    function openTab(id) {
+      tabs.forEach(tab => tab.classList.add('hidden'));
+      buttons.forEach(btn => btn.classList.remove('bg-blue-300'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+    // Show first tab on load
+    openTab('mod1');
+  </script>
+
+</body>
+</html>
